@@ -188,8 +188,7 @@ export function useDerivedSwapInfo(): {
 
   const slippageAdjustedAmounts = v1Trade && allowedSlippage && computeSlippageAdjustedAmounts(v1Trade, allowedSlippage)
 
-  const slippageAdjustedAmountsV =
-    vTrade && allowedSlippage && computeSlippageAdjustedAmounts(vTrade, allowedSlippage)
+  const slippageAdjustedAmountsV = vTrade && allowedSlippage && computeSlippageAdjustedAmounts(vTrade, allowedSlippage)
 
   // compare input balance to max input based on version
   const [balanceIn, amountIn] = [

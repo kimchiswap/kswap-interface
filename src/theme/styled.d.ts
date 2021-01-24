@@ -9,10 +9,10 @@ export interface Colors {
   // text
   BUYTEXT: Color
   EnterAmountconectwallet: Color
-  BorderColor:Color
-  KSWAPBACKGROUND:Color
+  BorderColor: Color
+  KSWAPBACKGROUND: Color
   RDial: Color
-  Rdial1:Color
+  Rdial1: Color
   text1: Color
   text2: Color
   text3: Color
@@ -33,7 +33,7 @@ export interface Colors {
   cardsBoxShadowTopRightcorner: Color
   cardsBoxShadowTopRightCorner1: Color
   settingMenuiconStrokeColor: Color
-  voteCardColor: Color;
+  voteCardColor: Color
 
   modalBG: Color
   advancedBG: Color
@@ -91,7 +91,6 @@ declare module 'styled-components' {
     flexRowNoWrap: FlattenSimpleInterpolation
   }
 }
-
 
 // import { FlattenSimpleInterpolation, ThemedCssFunction } from 'styled-components'
 

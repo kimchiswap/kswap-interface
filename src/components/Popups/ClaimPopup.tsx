@@ -19,8 +19,8 @@ import { AutoColumn } from '../Column'
 // import { CardBGImage, CardNoise } from '../vote/styled'
 
 const StyledClaimPopup = styled(AutoColumn)`
-// background: radial-gradient(76.02% 75.41% at 1.84% 0%, #ff007a 0%, #021d43 100%);
-background: radial-gradient(76.02% 75.41% at 1.84% 0%,#F97341 0%,#5FB347 100%);
+  // background: radial-gradient(76.02% 75.41% at 1.84% 0%, #ff007a 0%, #021d43 100%);
+  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #f97341 0%, #5fb347 100%);
   border-radius: 20px;
   padding: 1.5rem;
   overflow: hidden;

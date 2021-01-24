@@ -1,4 +1,4 @@
-import { ChainId} from '@kimchiswap/sdk'
+import { ChainId } from '@kimchiswap/sdk'
 import React, { useState } from 'react'
 import { Text } from 'rebass'
 import { NavLink } from 'react-router-dom'
@@ -11,11 +11,11 @@ import Logo from '../../assets/images/black_logo.png'
 // import LogoDark from '../../assets/svg/logo_white.svg'
 import { useActiveWeb3React } from '../../hooks'
 // import { useDarkModeManager } from '../../state/user/hooks'
-import { useETHBalances} from '../../state/wallet/hooks'
+import { useETHBalances } from '../../state/wallet/hooks'
 // import { CardNoise } from '../vote/styled'
 // import { CountUp } from 'use-count-up'
 // ExternalLink
-import {  ExternalLink } from '../../theme'
+import { ExternalLink } from '../../theme'
 
 import { YellowCard } from '../Card'
 import Settings from '../Settings'
@@ -40,14 +40,14 @@ const HeaderFrame = styled.div`
   align-items: center;
   flex-direction: row;
   width: 100%;
-  
+
   top: 0;
   position: relative;
   // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem;
   z-index: 2;
-  
+
   ${({ theme }) => theme.mediaWidth.upToMedium`
     grid-template-columns: 1fr;
     padding: 0 1rem;
@@ -100,16 +100,16 @@ const HeaderElement = styled.div`
 `
 
 const HeaderElementWrap = styled.div`
-display: flex;
-position: fixed;
-right: 17px;
-bottom: 16px;
--webkit-align-items: center;
--webkit-box-align: center;
--ms-flex-align: center;
-align-items: center;
+  display: flex;
+  position: fixed;
+  right: 17px;
+  bottom: 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 `
-const Row = styled(Box) <{ align?: string; padding?: string; border?: string; borderRadius?: string }>`
+const Row = styled(Box)<{ align?: string; padding?: string; border?: string; borderRadius?: string }>`
   // width: 100%;
   display: flex;
   padding: 0;
@@ -118,7 +118,7 @@ const Row = styled(Box) <{ align?: string; padding?: string; border?: string; bo
   border: ${({ border }) => border};
   border-radius: ${({ borderRadius }) => borderRadius};
 `
-export const PercentageDiv = styled(Row) <{ align?: string; padding?: string; border?: string; borderRadius?: string }>`
+export const PercentageDiv = styled(Row)<{ align?: string; padding?: string; border?: string; borderRadius?: string }>`
   width: 100%;
   display: flex;
   padding: 0;
@@ -137,7 +137,7 @@ export const RowFlat = styled.div`
   align-items: flex-end;
 `
 
-export const AutoRow = styled(Row) <{ gap?: string; justify?: string }>`
+export const AutoRow = styled(Row)<{ gap?: string; justify?: string }>`
   flex-wrap: wrap;
   margin: ${({ gap }) => gap && `-${gap}`};
   justify-content: ${({ justify }) => justify && justify};
@@ -147,7 +147,7 @@ export const AutoRow = styled(Row) <{ gap?: string; justify?: string }>`
   }
 `
 
-const HeaderRowFixed = styled(Row) <{ gap?: string; justify?: string }>`
+const HeaderRowFixed = styled(Row)<{ gap?: string; justify?: string }>`
   // width: fit-content;
   // background-color: red;
   justify-content: space-between;
@@ -223,7 +223,7 @@ const HideSmall = styled.span`
 
 const NetworkCard = styled(YellowCard)`
   border-radius: 12px;
-  color:${({ theme }) => theme.text1};
+  color: ${({ theme }) => theme.text1};
   padding: 8px 12px;
   ${({ theme }) => theme.mediaWidth.upToSmall`
     margin: 0;
@@ -256,7 +256,7 @@ const Title = styled.a`
 `
 
 const KswapIcon = styled.div`
-filter: ${({ theme }) => theme.pngLOGOCOLOR};
+  filter: ${({ theme }) => theme.pngLOGOCOLOR};
   transition: transform 0.3s ease;
   :hover {
     transform: rotate(-5deg);
@@ -293,7 +293,7 @@ const StyledNavLink = styled(NavLink).attrs({
 
 const StyledExternalLink = styled(ExternalLink).attrs({
   activeClassName
-}) <{ isActive?: boolean }>`
+})<{ isActive?: boolean }>`
   ${({ theme }) => theme.flexRowNoWrap}
   align-items: left;
 
@@ -360,7 +360,6 @@ export default function Header() {
       <HeaderRow>
         <Title href=".">
           <KswapIcon>
-        
             <img width={'124px'} src={Logo} alt="logo" />
           </KswapIcon>
         </Title>

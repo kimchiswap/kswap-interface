@@ -30,9 +30,9 @@ const CurrencySelect = styled.button<{ selected: boolean }>`
   width: 162px;
   font-weight: 400;
   // background-color: #707070;
-      // background: #2B2626;
-      box-shadow: inset 6px 10px 12px 197px rgba(255, 255, 255, 0.1) !important;
-      // filter: blur(0.4px) !important;
+  // background: #2B2626;
+  box-shadow: inset 6px 10px 12px 197px rgba(255, 255, 255, 0.1) !important;
+  // filter: blur(0.4px) !important;
   background-color: ${({ selected, theme }) => (selected ? theme.bg1 : theme.primary3)};
   color: ${({ selected, theme }) => (selected ? theme.text1 : theme.white)};
   // border-radius: 12px;
@@ -75,8 +75,8 @@ const StyledDropDown = styled(DropDown)<{ selected: boolean }>`
   margin: 0 0.25rem 0 0.5rem;
   height: 35%;
   width: 15px;
-  g{
-    fill: #FFFFFf;
+  g {
+    fill: #ffffff;
     opacity: 0.3;
   }
   path {

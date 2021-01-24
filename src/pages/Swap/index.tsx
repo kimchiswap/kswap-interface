@@ -51,9 +51,8 @@ import Loader from '../../components/Loader'
 //   color: ${({ theme }) => theme.text1};
 // `
 const AppBodyContainer = styled.div`
-display: flex;
-justify-content: space-between;
-
+  display: flex;
+  justify-content: space-between;
 `
 const BelowAppbody = styled.div`
 margin: 15px 44px;
@@ -61,7 +60,8 @@ border-radius: 40px 116px 0 0;
 box-sizing: border-box;
 background-color: cyan;
 box-shadow: 166px 130px 170px 73px #94ff2dc2, 11px 33px 56px 13px rgb(249 115 65 / 0%);
-// box-shadow:  ${({ theme }) => `-6px 23px 150px 73px ${theme.cardsBoxShadowTopLeftcorner}, -9px 33px 56px 13px ${theme.cardsBoxShadowTopleftCorner1}`};
+// box-shadow:  ${({ theme }) =>
+  `-6px 23px 150px 73px ${theme.cardsBoxShadowTopLeftcorner}, -9px 33px 56px 13px ${theme.cardsBoxShadowTopleftCorner1}`};
 // box-shadow: -6px 23px 150px 73px rgb(249,115,65,0.5), -9px 33px 56px 21px rgb(249 115 65 / 0%);
 
 `
@@ -70,7 +70,7 @@ box-shadow: 166px 130px 170px 73px #94ff2dc2, 11px 33px 56px 13px rgb(249 115 65
 // border-radius: 40px 116px 0 0;
 // box-sizing: border-box;
 // background-color: cyan;
-// box-shadow:  ${({ theme }) => `10px -3px 136px 41px ${theme.cardsBoxShadowTopRightcorner}, -15px 28px 140px 11px ${theme.cardsBoxShadowTopRightCorner1}`} 
+// box-shadow:  ${({ theme }) => `10px -3px 136px 41px ${theme.cardsBoxShadowTopRightcorner}, -15px 28px 140px 11px ${theme.cardsBoxShadowTopRightCorner1}`}
 // // box-shadow: 10px -3px 136px 41px rgb(95,179,71), -15px 28px 140px 11px rgb(95,179,71);
 // `
 export default function Swap() {
@@ -132,19 +132,19 @@ export default function Swap() {
     toggledVersion === Version.v1 && isTradeBetter(v1Trade, vTrade, BETTER_TRADE_LINK_THRESHOLD)
       ? Version.v
       : toggledVersion === Version.v && isTradeBetter(vTrade, v1Trade)
-        ? Version.v1
-        : undefined
+      ? Version.v1
+      : undefined
 
   const parsedAmounts = showWrap
     ? {
-      [Field.INPUT]: parsedAmount,
-      [Field.OUTPUT]: parsedAmount
-    }
+        [Field.INPUT]: parsedAmount,
+        [Field.OUTPUT]: parsedAmount
+      }
     : {
-      [Field.INPUT]: independentField === Field.INPUT ? parsedAmount : trade?.inputAmount,
-      [Field.OUTPUT]: independentField === Field.OUTPUT ? parsedAmount : trade?.outputAmount
-    }
-    // onSwitchTokens
+        [Field.INPUT]: independentField === Field.INPUT ? parsedAmount : trade?.inputAmount,
+        [Field.OUTPUT]: independentField === Field.OUTPUT ? parsedAmount : trade?.outputAmount
+      }
+  // onSwitchTokens
   const { onSwitchTokens, onCurrencySelection, onUserInput, onChangeRecipient } = useSwapActionHandlers()
   const isValid = !swapInputError
   const dependentField: Field = independentField === Field.INPUT ? Field.OUTPUT : Field.INPUT
@@ -229,8 +229,8 @@ export default function Swap() {
             recipient === null
               ? 'Swap w/o Send'
               : (recipientAddress ?? recipient) === account
-                ? 'Swap w/o Send + recipient'
-                : 'Swap w/ Send',
+              ? 'Swap w/o Send + recipient'
+              : 'Swap w/ Send',
           label: [
             trade?.inputAmount?.currency?.symbol,
             trade?.outputAmount?.currency?.symbol,
@@ -432,8 +432,8 @@ export default function Swap() {
                   ) : approvalSubmitted && approval === ApprovalState.APPROVED ? (
                     'Approved'
                   ) : (
-                        'Approve ' + currencies[Field.INPUT]?.symbol
-                      )}
+                    'Approve ' + currencies[Field.INPUT]?.symbol
+                  )}
                 </ButtonConfirmed>
                 <ButtonError
                   onClick={() => {
@@ -464,33 +464,33 @@ export default function Swap() {
                 </ButtonError>
               </RowBetween>
             ) : (
-                      <ButtonError
-                        onClick={() => {
-                          if (isExpertMode) {
-                            handleSwap()
-                          } else {
-                            setSwapState({
-                              tradeToConfirm: trade,
-                              attemptingTxn: false,
-                              swapErrorMessage: undefined,
-                              showConfirm: true,
-                              txHash: undefined
-                            })
-                          }
-                        }}
-                        id="swap-button"
-                        disabled={!isValid || (priceImpactSeverity > 3 && !isExpertMode) || !!swapCallbackError}
-                        error={isValid && priceImpactSeverity > 2 && !swapCallbackError}
-                      >
-                        <Text fontSize={20} fontWeight={500}>
-                          {swapInputError
-                            ? swapInputError
-                            : priceImpactSeverity > 3 && !isExpertMode
-                              ? `Price Impact Too High`
-                              : `Swap${priceImpactSeverity > 2 ? ' Anyway' : ''}`}
-                        </Text>
-                      </ButtonError>
-                    )}
+              <ButtonError
+                onClick={() => {
+                  if (isExpertMode) {
+                    handleSwap()
+                  } else {
+                    setSwapState({
+                      tradeToConfirm: trade,
+                      attemptingTxn: false,
+                      swapErrorMessage: undefined,
+                      showConfirm: true,
+                      txHash: undefined
+                    })
+                  }
+                }}
+                id="swap-button"
+                disabled={!isValid || (priceImpactSeverity > 3 && !isExpertMode) || !!swapCallbackError}
+                error={isValid && priceImpactSeverity > 2 && !swapCallbackError}
+              >
+                <Text fontSize={20} fontWeight={500}>
+                  {swapInputError
+                    ? swapInputError
+                    : priceImpactSeverity > 3 && !isExpertMode
+                    ? `Price Impact Too High`
+                    : `Swap${priceImpactSeverity > 2 ? ' Anyway' : ''}`}
+                </Text>
+              </ButtonError>
+            )}
             {showApproveFlow && (
               <Column style={{ marginTop: '1rem' }}>
                 <ProgressSteps steps={[approval === ApprovalState.APPROVED]} />

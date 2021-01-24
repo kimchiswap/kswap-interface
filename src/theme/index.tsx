@@ -22,7 +22,7 @@ const MEDIA_WIDTHS = {
 
 const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } = Object.keys(MEDIA_WIDTHS).reduce(
   (accumulator, size) => {
-    ; (accumulator as any)[size] = (a: any, b: any, c: any) => css`
+    ;(accumulator as any)[size] = (a: any, b: any, c: any) => css`
       @media (max-width: ${(MEDIA_WIDTHS as any)[size]}px) {
         ${css(a, b, c)}
       }
@@ -43,10 +43,10 @@ export function colors(darkMode: boolean): Colors {
 
     // text
     // text1: darkMode ? '#FFFFFF' : '#000000',
-    BUYTEXT: darkMode ? "#FFFFFF" : "#000000",
-    EnterAmountconectwallet : darkMode ? "#FFFFFF":"#000000",
-    KSWAPBACKGROUND: darkMode ? 'rgb(16, 226, 242)' : "rgb(16, 226, 242)",
-    BorderColor: darkMode ? "rgba(0,0,0,0)" : "rgb(100, 102, 219)",
+    BUYTEXT: darkMode ? '#FFFFFF' : '#000000',
+    EnterAmountconectwallet: darkMode ? '#FFFFFF' : '#000000',
+    KSWAPBACKGROUND: darkMode ? 'rgb(16, 226, 242)' : 'rgb(16, 226, 242)',
+    BorderColor: darkMode ? 'rgba(0,0,0,0)' : 'rgb(100, 102, 219)',
     text1: darkMode ? '#FFFFFF' : '#000000',
     text2: darkMode ? '#C3C5CB' : '#565A69',
     text3: darkMode ? '#6C7284' : '#888D9B',
@@ -55,28 +55,30 @@ export function colors(darkMode: boolean): Colors {
     textConeectToWaletOnNavbar: darkMode ? '#c3c5cb' : '#000000',
     // backgrounds / greys
     // bg1: darkMode ? '#151313' : '#FFFFFF',
-    bg1: darkMode ? "#151515" : '#FFFFFF',
-    settingCardbg: darkMode ? "#020202" : '#ffffff',
+    bg1: darkMode ? '#151515' : '#FFFFFF',
+    settingCardbg: darkMode ? '#020202' : '#ffffff',
     bg2: darkMode ? '#020202' : 'rgba(0,0,0,0)',
     // radial-gradient(82.02% 184.41% at 52.84% -52%,#363cff4a -43%,#dfd1e275 80%)
-    RDial: darkMode ? "#7eb119" : "#94ff2dc2",
-    Rdial1: darkMode ? "#020202" : "#ffffff75",
-    // bg2: darkMode ? '#2C2F36' : '#F7F8FA', 
+    RDial: darkMode ? '#7eb119' : '#94ff2dc2',
+    Rdial1: darkMode ? '#020202' : '#ffffff75',
+    // bg2: darkMode ? '#2C2F36' : '#F7F8FA',
     // bg3: darkMode ? '#40444F' : '#EDEEF2',
     bg3: darkMode ? '#40444F' : '#EDEEF2',
     bg4: darkMode ? '#565A69' : '#CED0D9',
     bg5: darkMode ? '#6C7284' : '#888D9B',
     bgSWAP6: darkMode ? '#ed7b17' : '#ed7b17',
-    cardsBoxShadowTopLeftcorner: darkMode ? "rgb(234 212 16)" : "#363cffbf",
-    cardsBoxShadowTopleftCorner1: darkMode ? "rgb(249 115 65 / 0%)" : "#363cff",
-    cardsBoxShadowTopRightcorner: darkMode ? "rgb(228 96 24)" : "rgb(179 71 136 / 85%)",
-    cardsBoxShadowTopRightCorner1: darkMode ? "rgb(78 71 179)" : "rgb(179 71 136 / 85%)",
-    settingMenuiconStrokeColor: darkMode ? "#94ff2dc2" : "#ff7c00",
-    voteCardColor: darkMode ? "radial-gradient(76.02% 75.41% at 1.84% 0%,#94ff2dc2 0%,#151515 100%)" : "radial-gradient(76.02% 75.41% at 1.84% 0%,#ff7c00 0%,#84e66382 100%)",
+    cardsBoxShadowTopLeftcorner: darkMode ? 'rgb(234 212 16)' : '#363cffbf',
+    cardsBoxShadowTopleftCorner1: darkMode ? 'rgb(249 115 65 / 0%)' : '#363cff',
+    cardsBoxShadowTopRightcorner: darkMode ? 'rgb(228 96 24)' : 'rgb(179 71 136 / 85%)',
+    cardsBoxShadowTopRightCorner1: darkMode ? 'rgb(78 71 179)' : 'rgb(179 71 136 / 85%)',
+    settingMenuiconStrokeColor: darkMode ? '#94ff2dc2' : '#ff7c00',
+    voteCardColor: darkMode
+      ? 'radial-gradient(76.02% 75.41% at 1.84% 0%,#94ff2dc2 0%,#151515 100%)'
+      : 'radial-gradient(76.02% 75.41% at 1.84% 0%,#ff7c00 0%,#84e66382 100%)',
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
-    pngLOGOCOLOR: darkMode ? 'invert(1)' : "",
+    pngLOGOCOLOR: darkMode ? 'invert(1)' : '',
     //primary colors
     // primary1: darkMode ? '#2172E5' : '#ff007a',
     // primary1: darkMode ? '#ed7b17' : '#ed7b17',
@@ -97,7 +99,6 @@ export function colors(darkMode: boolean): Colors {
     // primaryText1: darkMode ? '#6da8ff' : '#ff007a',
     // primaryText1: darkMode ? '#FFFFFF' : '#FFFFFF',
     primaryText1: darkMode ? '#FFFFFF' : '#000000',
-
 
     // secondary colors
     secondary1: darkMode ? '#2172E5' : '#2172E5',
@@ -154,7 +155,7 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
   return <StyledComponentsThemeProvider theme={themeObject}>{children}</StyledComponentsThemeProvider>
 }
 
-const TextWrapper = styled(Text) <{ color: keyof Colors }>`
+const TextWrapper = styled(Text)<{ color: keyof Colors }>`
   color: ${({ color, theme }) => (theme as any)[color]};
 `
 
@@ -246,7 +247,8 @@ export const ThemedGlobalStyle = createGlobalStyle`
 html {
   color: ${({ theme }) => theme.text1};
   // background: ${({ theme }) => theme.bg2};
-  background: ${({ theme }) => `radial-gradient(82.02% 184.41% at 52.84% -52%,${theme.RDial} -43%,${theme.Rdial1} 80%)`};
+  background: ${({ theme }) =>
+    `radial-gradient(82.02% 184.41% at 52.84% -52%,${theme.RDial} -43%,${theme.Rdial1} 80%)`};
 }
 
 body {
@@ -260,5 +262,3 @@ body {
     )} 100%)`};
 }
 `
-
-

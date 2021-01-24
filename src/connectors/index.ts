@@ -54,6 +54,5 @@ export const portis = new PortisConnector({
 export const walletlink = new WalletLinkConnector({
   url: NETWORK_URL,
   appName: 'KSWAP',
-  appLogoUrl:
-    ''
+  appLogoUrl: ''
 })

@@ -61,7 +61,7 @@ const Web3StatusError = styled(Web3StatusGeneric)`
 const Web3StatusConnect = styled(Web3StatusGeneric)<{ faded?: boolean }>`
   background-color: ${({ theme }) => theme.primary4};
   // border: none;
-  border:  ${({ theme }) => `1px solid ${theme.BorderColor}` };
+  border:  ${({ theme }) => `1px solid ${theme.BorderColor}`};
   color: ${({ theme }) => theme.primaryText1};
   font-weight: 500;
 
@@ -81,7 +81,7 @@ const Web3StatusConnect = styled(Web3StatusGeneric)<{ faded?: boolean }>`
       background-color: ${({ theme }) => theme.primary8}
       // background-color: #020202;
       // border: 1px solid ${({ theme }) => theme.primary5};
-      // border:  ${({ theme }) => `1px solid ${theme.BorderColor}` };
+      // border:  ${({ theme }) => `1px solid ${theme.BorderColor}`};
       // color: ${({ theme }) => theme.primaryText1};
       // color: transparent;
 

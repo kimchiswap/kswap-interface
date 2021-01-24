@@ -61,7 +61,7 @@ export const ButtonPrimary = styled(Base)`
     color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? 'white' : theme.text3)};
     cursor: auto;
     box-shadow: none;
-    border: 1px solid  ${({ theme }) => theme.primary3};
+    border: 1px solid ${({ theme }) => theme.primary3};
     outline: none;
     opacity: ${({ altDisabledStyle }) => (altDisabledStyle ? '0.7' : '0.4')};
   }

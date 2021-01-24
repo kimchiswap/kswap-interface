@@ -32,23 +32,23 @@ const StyledInput = styled.input<{ error?: boolean; fontSize?: string; align?: s
   // [type='number'] {
   //   -moz-appearance: number;
   // }
-  input[type=number] {
+  input[type='number'] {
     height: 30px;
     line-height: 30px;
     font-size: 16px;
     padding: 0 8px;
-}
-::-webkit-inner-spin-button { 
+  }
+  ::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    cursor:pointer;
-    display:block;
-    width:8px;
+    cursor: pointer;
+    display: block;
+    width: 8px;
     color: #333;
-    text-align:center;
-    position:relative;
-}    
-  ::-webkit-inner-spin-button { 
-    background: transparent url('http://i.stack.imgur.com/YYySO.png') no-repeat 50% 50%;  
+    text-align: center;
+    position: relative;
+  }
+  ::-webkit-inner-spin-button {
+    background: transparent url('http://i.stack.imgur.com/YYySO.png') no-repeat 50% 50%;
     width: 14px;
     opacity: 1 !important;
     filter: grayscale(1);
@@ -58,8 +58,8 @@ const StyledInput = styled.input<{ error?: boolean; fontSize?: string; align?: s
     position: relative;
     right: 4px;
     border-radius: 28px;
-}
-  
+  }
+
   ::placeholder {
     // color: white;
     font-size: 20px;

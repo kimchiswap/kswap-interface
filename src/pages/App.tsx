@@ -17,7 +17,7 @@ import {
   RedirectOldAddLiquidityPathStructure,
   RedirectToAddLiquidity
 } from './AddLiquidity/redirects'
-import {VoteComingSoon} from './Vote/vote'
+import { VoteComingSoon } from './Vote/vote'
 // import Earn from './Earn'
 // import Manage from './Earn/Manage'
 // import MigrateV from './MigrateV'
@@ -38,7 +38,7 @@ const AppWrapper = styled.div`
   flex-flow: column;
   align-items: flex-start;
   overflow-x: hidden;
-  background: radial-gradient(40% 60% at 52% 11%,#85b119 -184%,rgba(255,255,255,0) 100%);
+  background: radial-gradient(40% 60% at 52% 11%, #85b119 -184%, rgba(255, 255, 255, 0) 100%);
 `
 
 const HeaderWrapper = styled.div`

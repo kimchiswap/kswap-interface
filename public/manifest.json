@@ -1,0 +1,22 @@
+{
+  "short_name": "KSWAP",
+  "name": "KSWAP",
+  "icons": [
+    {
+      "src": "./images/kswapLogo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./images/kswapLogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait",
+  "display": "standalone",
+  "theme_color": "#ff007a",
+  "background_color": "#fff"
+}
